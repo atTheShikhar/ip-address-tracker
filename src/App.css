@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+.main {
+    height: 100vh;
+}
+.top {
+    height: 35vh;
+    background-image: url("pattern-bg.png");
+    position: relative;
+}
+.header {
+    color: white;
+    width: 300px;
+    padding: 32px 0 32px 0;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+}
+
+.search-wrapper {
+    margin: auto;
+    width: 90vw;
+}
+
+.search-bar {
+    border: solid 0px black;
+    height: 45px;
+    font-weight: 400;
+    min-width: 88%;    
+    border-radius: 10px 0 0 10px;
+    padding: 15px;
+    font-size: 18px;
+}
+.search-button {
+    display: inline-block;
+    border: solid 0px black;
+    background-color: black;
+    position: relative;
+    left: -1px;
+    top: -1px;
+    height: 45px;
+    min-width: 12%;
+    border-radius: 0 10px 10px 0;
+}
+
+.middle {
+    padding: 15px;
+    position: relative;
+    background-color: white;
+    width: 90vw;
+    margin: 30px auto;
+    /* left: 5vw; */
+    /* top: 21vh; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 6;
+}
+.wrapper {
+    margin: 10px 0 10px 0;
+}
+.name {
+    font-weight: 500;
+    font-size: 12px;
+    color: hsl(0, 0%, 59%);
+    margin-bottom: 5px;
+}
+.value {
+    font-weight: 500;
+    font-size: 20px;
+    color: hsl(0, 0%, 17%);
+}
+
+.bottom {
+    height: 65vh;
+    width: 100%;
+    background-color: rgb(220, 220, 220);
+    z-index: 4;
+}
+.loading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color:hsl(0, 0%, 40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+.leaflet-container {
+    width: 100%;
+    height: 65vh;
+    z-index: 5;
+}
+.error {
+    position: absolute;
+    bottom:0;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(209, 0, 0);
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 7;
+}
+
