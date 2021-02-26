@@ -1,6 +1,6 @@
 # Public IP Tracking web-app
 
-[Live Deployment](https://app.netlify.com/sites/confident-brown-4ff024/deploys/60392dfea8a39c09efd37f1e)
+[Live Deployment](https://60392dfea8a39c09efd37f1e--confident-brown-4ff024.netlify.app/)
 
 Please turn off ad blocker to get this working!
 Initial page load shows clients location based on their public ip.
