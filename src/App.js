@@ -3,6 +3,7 @@ import SearchBar from './components/SearchBar'
 import "./App.css"
 import InfoBox from './components/InfoBox'
 import RenderMap from './components/RenderMap'
+import LoadingBox from './components/LoadingBox'
 
 function App() {
   const [locationData, setLocationData] = useState(null) 
@@ -45,7 +46,7 @@ function App() {
           IP Address Tracker
         </div>
         <SearchBar setIpAddress={setIpAddress}/>
-        {!locationData && <div className="middle loading">Loading...</div>}
+        {!locationData && <LoadingBox />}
         {locationData && <InfoBox data={locationData}/>}
       </div>
 

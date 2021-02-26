@@ -24,40 +24,39 @@
     margin: auto;
 }
 
+/*styles for SearchBar component*/
 .search-wrapper {
     margin: auto;
     width: 90vw;
 }
-
 .search-bar {
-    border: solid 0px black;
+    border: none;
     height: 45px;
     font-weight: 400;
-    min-width: 88%;    
+    width: 88%;    
     border-radius: 10px 0 0 10px;
     padding: 15px;
-    font-size: 18px;
+    font-size: 1rem;
 }
 .search-button {
     display: inline-block;
-    border: solid 0px black;
+    border: none;
     background-color: black;
     position: relative;
     left: -1px;
-    top: -1px;
     height: 45px;
-    min-width: 12%;
+    width: 12%;
     border-radius: 0 10px 10px 0;
 }
 
+/*styles for InfoBox component*/
 .middle {
     padding: 15px;
     position: relative;
     background-color: white;
+    box-shadow: 0 15px 20px -5px rgba(220,220,220);
     width: 90vw;
-    margin: 30px auto;
-    /* left: 5vw; */
-    /* top: 21vh; */
+    margin: 5vmin auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -72,7 +71,7 @@
     font-weight: 500;
     font-size: 12px;
     color: hsl(0, 0%, 59%);
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 .value {
     font-weight: 500;
@@ -80,12 +79,20 @@
     color: hsl(0, 0%, 17%);
 }
 
+/*styles for RenderMap component*/
 .bottom {
     height: 65vh;
     width: 100%;
     background-color: rgb(220, 220, 220);
     z-index: 4;
 }
+/*Leaflet container is basically map container*/
+.leaflet-container {
+    width: 100%;
+    height: 65vh;
+    z-index: 5;
+}
+/*Map loading styles*/
 .loading {
     text-align: center;
     font-size: 24px;
@@ -95,23 +102,69 @@
     flex-direction: column;
     justify-content: center;
 } 
-.leaflet-container {
-    width: 100%;
-    height: 65vh;
-    z-index: 5;
+
+/*styles for LoadingBox component*/
+.inner-wrapper {
+    margin-bottom: 15px;
 }
+.inner-wrapper:last-child {
+    margin-bottom: 0;
+}
+.text {
+    background-color: rgb(220,220,220);
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.head {
+    height: 10px;
+    width: 40%;
+}
+.subhead {
+    height: 20px;
+    width: 80%;
+}
+
+
+/*Error dialog*/
 .error {
     position: absolute;
     bottom:0;
-    height: 50px;
+    height: 40px;
     width: 100%;
+    border-radius: 10px 10px 0 0;
     background-color: rgb(209, 0, 0);
     color: white;
-    font-size: 22px;
+    font-size: 1rem;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 7;
 }
+
+@media screen and (min-width: 800px) {
+    .search-wrapper {
+        width: 33vw;
+    }
+    .middle {
+        flex-direction: row;
+        width: 80vw;
+    }
+    .wrapper {
+        text-align: left;
+        word-wrap: break-word;
+        width: 25%;
+        padding: 0 20px 0 20px;
+        border-left: solid 1px hsl(0, 0%, 90%);
+    }
+    .wrapper:first-child {
+        border-left: none;
+    }
+    .error {
+        width: 20%;
+        border-radius: 0 10px 0 0;
+    }
+}
+
+
 

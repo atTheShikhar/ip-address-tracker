@@ -2,10 +2,7 @@ import React from 'react'
 
 function InfoBox(props) {
     const {data} = props;
-    // let ipAddress = data?.ip ?? 'Loading...' ;
-    // let location = (data?.location?.city + ","+data?.location?.region) ?? 'Loading...';
-    // let timezone = data?.location?.timezone ?? 'Loading...';
-    // let isp = data?.isp ?? 'Loading...'; 
+
     return (
         <div className="middle">
             <div className="ip wrapper">
