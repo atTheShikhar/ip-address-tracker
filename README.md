@@ -1,7 +1,18 @@
 # Public IP Tracking web-app
 
-Initial page load shows clients location based on their public ip.\
+[Live Deployment](https://app.netlify.com/sites/confident-brown-4ff024/deploys/60392dfea8a39c09efd37f1e)
+
+Please turn off ad blocker to get this working!
+Initial page load shows clients location based on their public ip.
 After initial loading enter the public ip to get the location.
+
+## Prerequisite
+
+1. Visit [this](https://geo.ipify.org/) site and create a free tier account.
+2. Copy the private key generated.
+3. Create a .env file on the root of the project.
+4. Write down -
+    `REACT_APP_API_KEY=<api key copied earlier>`
 
 
 # Getting Started with Create React App
