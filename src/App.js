@@ -11,16 +11,15 @@ function App() {
   //Set this state if ip address entered is invalid
   const [invalidIp, setInvalidIp] = useState(false);
 
-  // const apiEndpoint = `https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_API_KEY}&ipAddress=${ipAddress}`;
-  const apiEndpoint = `http://ip-api.com/json/${ipAddress}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query`;
+  const apiEndpoint = `https://ipinfo.io/${ipAddress}?token=b4d0d97ba75d9b`;
 
   async function fetchData() {
     //Set to null so that to show loading screen
     setLocationData(null);
     const res = await fetch(apiEndpoint);
     const data = await res.json();
-    if (data.status === "fail") {
-      console.log(data.messages);
+    if (data.hasOwnProperty("bogon") || data.hasOwnProperty("error")) {
+      console.log(data);
       //Set Ip address to null so that page redirects to clients location
       setIpAddress("");
 
@@ -53,7 +52,10 @@ function App() {
 
       {!locationData && <div className="bottom loading">Loading...</div>}
       {locationData && (
-        <RenderMap lat={locationData.lat} lng={locationData.lon} />
+        <RenderMap
+          lat={locationData.loc.split(",")[0]}
+          lng={locationData.loc.split(",")[1]}
+        />
       )}
     </div>
   );

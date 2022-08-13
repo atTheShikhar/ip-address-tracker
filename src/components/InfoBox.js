@@ -7,13 +7,13 @@ function InfoBox(props) {
     <div className="middle">
       <div className="ip wrapper">
         <div className="name">IP ADDRESS</div>
-        <div className="value">{data.query}</div>
+        <div className="value">{data.ip}</div>
       </div>
 
       <div className="location wrapper">
         <div className="name">LOCATION</div>
         <div className="value">
-          {data.city + "," + data.region + " " + data.zip}
+          {data.city + "," + data.region + " " + data.postal}
         </div>
       </div>
 
@@ -24,7 +24,7 @@ function InfoBox(props) {
 
       <div className="isp wrapper">
         <div className="name">ISP</div>
-        <div className="value">{data.isp}</div>
+        <div className="value">{data.org.split(" ").slice(1).join(" ")}</div>
       </div>
     </div>
   );
